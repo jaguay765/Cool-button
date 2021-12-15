@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    background-color: gray;
+    font-family: sans-serif;
+    position: relative;
+    align-content: center;
+    justify-content: center;
+}
+
+.button{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top:50%;
+    left: 50%;
+    color: white;
+    text-shadow: black;
+    border: solid 1px white;
+    transition: all;
+    transition-duration: 0.5s;
+    box-shadow: black;
+    overflow: hidden;
+    z-index: 1;
+    border-radius:100px;
+}
+
+.button-container{
+    width: 500px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    color: white;
+    text-shadow: black;
+    transform: translateY(-50% );
+    transform: translateX(-50% );
+}
+
+
+.button:before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: skew( 20deg);
+    z-index: -1;
+    left: -110%;
+    background-color: red;
+    transition: 0.5s;
+}
+
+.button:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: skew( 20deg );
+    z-index: -1;
+    right: -110%;
+    background-color: blue;
+    transition: 0.5s;
+}
+
+.button:hover::before{
+    left: -50%;
+}
+
+.button:hover::after{
+    right: -50%;
+}
+
+</style>
+<body>
+<div class="button-container">
+    <div class="button">
+        young bands 4 pockets full like little baby
+    </div>
+</div>
+</body>
+</html>
